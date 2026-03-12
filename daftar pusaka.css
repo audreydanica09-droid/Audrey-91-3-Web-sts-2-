@@ -1,0 +1,201 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+
+body{
+background:linear-gradient(to bottom,#9fd0df,#b9e0ea);
+}
+
+
+
+/* HEADER */
+
+.banner{
+width:100%;
+height:180px;
+overflow:hidden;
+}
+
+.banner img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+
+
+/* NAVBAR */
+
+.menu{
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+gap:12px;
+background:#f04a5d;
+padding:15px;
+}
+
+.menu-btn{
+background:#ff5e6c;
+border:none;
+color:white;
+padding:10px 18px;
+border-radius:20px;
+font-weight:bold;
+cursor:pointer;
+text-decoration:none;
+transition:0.3s;
+}
+
+.menu-btn:hover{
+background:#ff2f45;
+}
+
+
+
+/* DROPDOWN */
+
+.dropdown-parent{
+position:relative;
+}
+
+.dropdown-menu{
+display:none;
+position:absolute;
+top:45px;
+left:0;
+background:white;
+min-width:180px;
+border-radius:12px;
+box-shadow:0 6px 15px rgba(0,0,0,0.2);
+padding:10px;
+z-index:100;
+}
+
+.dropdown-menu.show{
+display:block;
+}
+
+.dropdown-menu a{
+display:block;
+padding:10px;
+margin:6px 0;
+background:#ffa726;
+border-radius:8px;
+text-decoration:none;
+color:white;
+text-align:center;
+font-weight:bold;
+}
+
+.dropdown-menu a:hover{
+background:#fb8c00;
+}
+
+
+
+/* CONTAINER */
+
+.container{
+display:flex;
+justify-content:center;
+gap:40px;
+padding:60px 20px;
+flex-wrap:wrap;
+}
+
+
+
+/* CARD */
+
+.card{
+background:white;
+width:320px;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card.big{
+width:600px;
+}
+
+
+
+/* TEXT */
+
+.title{
+color:#1c8a45;
+margin-bottom:10px;
+}
+
+.subtitle{
+margin-bottom:20px;
+}
+
+.center{
+text-align:center;
+}
+
+.text{
+line-height:1.6;
+text-align: center;
+}
+
+
+
+/* GALERI */
+
+.gallery{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.gallery img{
+width:100%;
+height:140px;
+object-fit:cover;
+border-radius:12px;
+}
+
+
+
+/* CAROUSEL */
+
+.carousel{
+overflow:hidden;
+background:white;
+margin-top:40px;
+padding:30px 0;
+}
+
+.slide-track{
+display:flex;
+width:calc(200px * 12);
+animation:scroll 25s linear infinite;
+}
+
+.slide-track img{
+width:160px;
+height:100px;
+object-fit:contain;
+margin:0 30px;
+}
+
+@keyframes scroll{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
+}

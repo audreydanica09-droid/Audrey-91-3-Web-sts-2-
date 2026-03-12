@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Batak</title>
+
+<link rel="stylesheet" href="budaya pakpak.css">
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+<header class="banner">
+<img src="banner (1).png">
+</header>
+
+
+
+<!-- NAVBAR -->
+<nav class="menu">
+
+<a href="index.html" class="menu-btn">Beranda</a>
+
+
+<div class="dropdown-parent">
+<button class="menu-btn" data-menu="toba">Batak Toba</button>
+<div class="dropdown-menu" id="toba">
+<a href="pengertian toba.html">Pengertian</a>
+<a href="wilayah toba.html">Wilayah</a>
+<a href="budaya toba.html">Budaya</a>
+</div>
+</div>
+
+
+<div class="dropdown-parent">
+<button class="menu-btn" data-menu="karo">Batak Karo</button>
+<div class="dropdown-menu" id="karo">
+<a href="pengertian karo.html">Pengertian</a>
+<a href="Wilayah karo.html">Wilayah</a>
+<a href="Budaya karo.html">Budaya</a>
+</div>
+</div>
+
+
+<div class="dropdown-parent">
+<button class="menu-btn" data-menu="simalungun">Batak Simalungun</button>
+<div class="dropdown-menu" id="simalungun">
+<a href="pengertian simalungun.html">Pengertian</a>
+<a href="wilayah simalungun.html">Wilayah</a>
+<a href="budaya simalungun.html">Budaya</a>
+</div>
+</div>
+
+
+<div class="dropdown-parent">
+<button class="menu-btn" data-menu="mandailing">Batak Mandailing</button>
+<div class="dropdown-menu" id="mandailing">
+<a href="pengertian mandailing.html">Pengertian</a>
+<a href="wilayah mandailing.html">Wilayah</a>
+<a href="budaya mandailing.html">Budaya</a>
+</div>
+</div>
+
+
+<div class="dropdown-parent">
+<button class="menu-btn" data-menu="angkola">Batak Angkola</button>
+<div class="dropdown-menu" id="angkola">
+<a href="pengertian angkola.html">Pengertian</a>
+<a href="wilayah angkola.html">Wilayah</a>
+<a href="budaya angkola.html">Budaya</a>
+</div>
+</div>
+
+
+<div class="dropdown-parent">
+<button class="menu-btn" data-menu="pakpak">Batak Pakpak</button>
+<div class="dropdown-menu" id="pakpak">
+<a href="pengertian pakpak.html">Pengertian</a>
+<a href="wilayah pakpak.html">Wilayah</a>
+<a href="budaya pakpak.html">Budaya</a>
+</div>
+</div>
+
+
+<a href="daftar pusaka.html" class="menu-btn">Daftar Pustaka</a>
+<a href="profile.html" class="menu-btn">Profile</a>
+
+</nav>
+
+
+<!-- CONTENT -->
+<section class="container">
+
+
+<!-- GALERI -->
+<div class="card">
+
+<h2 class="title">Galeri</h2>
+
+<p class="subtitle">
+</p>
+
+<div class="gallery">
+
+<img src="tat.jpeg">
+
+<img src="pel.jpeg">
+
+</div>
+
+</div>
+
+
+
+<!-- SALAM REDAKSI -->
+<div class="card big">
+
+
+
+<p class="text">
+
+Budaya Batak Pakpak memiliki berbagai kesenian tradisional yang masih dilestarikan hingga sekarang. Salah satu tarian tradisional yang dikenal adalah Tari Tatak, yang biasanya ditampilkan dalam berbagai acara adat dan kegiatan budaya. Musik tradisionalnya dimainkan menggunakan alat musik seperti gendang dan gong yang mengiringi berbagai upacara adat. Dalam kuliner, masyarakat Pakpak memiliki makanan khas seperti pelleng, yaitu nasi kuning yang dimasak dengan berbagai rempah dan biasanya disajikan dalam acara penting. Selain itu, masyarakat Pakpak juga memiliki kain tradisional yang disebut Oles, yaitu kain tenun yang sering digunakan dalam pakaian adat dan kegiatan adat.</p>
+
+</div>
+
+
+</section>
+
+
+
+<!-- CAROUSEL -->
+<section class="carousel">
+
+<div class="slide-track">
+
+<img src="gibran.jpg">
+<img src="in.jpg">
+<img src="gb.jpg">
+<img src="b.jpg">
+<img src="bs1.jpg">
+<img src="logo6.png">
+
+<img src="pakaian-adat-pakpak-bharat-bataknesiainstagram_169.jpeg">
+<img src="pel.jpeg">
+<img src="nil.jpg">
+<img src="pdg.jpg">
+<img src="p.simalungun.jpg">
+<img src="a.jpg">
+
+</div>
+
+</section>
+
+
+<!-- SCRIPT DROPDOWN -->
+<script>
+
+const buttons = document.querySelectorAll(".menu-btn");
+const menus = document.querySelectorAll(".dropdown-menu");
+
+buttons.forEach(btn => {
+
+btn.addEventListener("click", function(e){
+
+const id = btn.getAttribute("data-menu");
+const menu = document.getElementById(id);
+
+if(!menu) return;
+
+e.stopPropagation();
+
+menus.forEach(m => {
+if(m !== menu) m.classList.remove("show");
+});
+
+menu.classList.toggle("show");
+
+});
+
+});
+
+document.addEventListener("click", () => {
+menus.forEach(m => m.classList.remove("show"));
+});
+
+</script>
+
+
+</body>
+</html>
